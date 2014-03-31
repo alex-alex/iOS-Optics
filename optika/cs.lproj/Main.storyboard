@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Wfa-E7-6Zd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1Rb-Qa-xYT">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="Wfa-E7-6Zd" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5qd-hY-Ut8">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZCp-7n-0Ec" kind="relationship" relationship="viewControllers" id="c14-mD-bM2"/>
+                        <segue destination="gIw-3e-Fe3" kind="relationship" relationship="viewControllers" id="hDs-BC-YYi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6TN-ms-VYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828" y="654"/>
+        </scene>
+        <!--Navigation Controller - Zrcadlo-->
+        <scene sceneID="kwp-uI-7Ym">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ZCp-7n-0Ec" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Zrcadlo" image="mirror" id="Fri-HL-zGk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gYZ-4F-Fci">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aBJ-7m-b1P" kind="relationship" relationship="rootViewController" id="5yj-Ax-Ouw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esv-2z-6h1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="327"/>
+        </scene>
+        <!--Mirror View Controller - Zrcadlo-->
+        <scene sceneID="LRI-Rs-Txv">
+            <objects>
+                <viewController id="aBJ-7m-b1P" customClass="MirrorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CVE-Le-cLt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="poloměr křivosti" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DAv-jF-5mA">
+                                <rect key="frame" x="20" y="120" width="280" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vzdálenost předmětu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jod-WA-VuW">
+                                <rect key="frame" x="20" y="158" width="280" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="výška předmětu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8DV-ag-oig">
+                                <rect key="frame" x="20" y="196" width="280" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="1" maxValue="60" id="YSm-ee-2cT">
+                                <rect key="frame" x="18" y="120" width="221" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="aBJ-7m-b1P" eventType="valueChanged" id="HVq-r2-L8f"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="1" maxValue="60" id="TJa-2Z-5vz">
+                                <rect key="frame" x="18" y="158" width="221" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="aBJ-7m-b1P" eventType="valueChanged" id="bxN-T8-DrI"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="60" id="740-F8-HnG">
+                                <rect key="frame" x="18" y="196" width="221" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="aBJ-7m-b1P" eventType="valueChanged" id="ios-oG-Isk"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.00 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="DpG-WK-alD">
+                                <rect key="frame" x="245" y="124" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.00 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="vCr-a8-22f">
+                                <rect key="frame" x="245" y="162" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.00 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="iaR-Uo-gvf">
+                                <rect key="frame" x="245" y="200" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="4pN-wg-rK8">
+                                <rect key="frame" x="20" y="84" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="rovinné"/>
+                                    <segment title="duté"/>
+                                    <segment title="vypuklé"/>
+                                </segments>
+                                <connections>
+                                    <action selector="controlChanged:" destination="aBJ-7m-b1P" eventType="valueChanged" id="2cf-1Y-Pj3"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" id="9fb-2A-Aj2" customClass="MirrorConstructionView">
+                                <rect key="frame" x="0.0" y="234" width="320" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zrcadlo" id="kkU-gl-eYB"/>
+                    <connections>
+                        <outlet property="_constructionView" destination="9fb-2A-Aj2" id="63t-Yk-xmj"/>
+                        <outlet property="_distanceLabel" destination="vCr-a8-22f" id="eOU-yj-Kdn"/>
+                        <outlet property="_distanceSlider" destination="TJa-2Z-5vz" id="rB1-5B-Ta3"/>
+                        <outlet property="_focusLabel" destination="DpG-WK-alD" id="gvI-8V-lCW"/>
+                        <outlet property="_focusPowerTitleLabel" destination="DAv-jF-5mA" id="wpy-P0-9Qk"/>
+                        <outlet property="_focusSlider" destination="YSm-ee-2cT" id="L7a-vs-T4n"/>
+                        <outlet property="_mirrorTypeControl" destination="4pN-wg-rK8" id="6J6-3z-vQ1"/>
+                        <outlet property="_sizeLabel" destination="iaR-Uo-gvf" id="3kK-rD-mvY"/>
+                        <outlet property="_sizeSlider" destination="740-F8-HnG" id="QoI-tB-ZTX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHr-14-6WF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="327"/>
+        </scene>
+        <!--Navigation Controller - Čočka-->
+        <scene sceneID="BlZ-vC-cTk">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gIw-3e-Fe3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Čočka" image="lens" id="Af4-Wr-k5Y"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JJQ-Vv-KyM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qHR-NM-sDm" kind="relationship" relationship="rootViewController" id="M6L-SS-Ns8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hI-t2-VJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="993"/>
+        </scene>
+        <!--Lens View Controller - Čočka-->
+        <scene sceneID="bKR-Ov-VNo">
+            <objects>
+                <viewController id="qHR-NM-sDm" customClass="LensViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nzx-O3-nXW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ohnisková vzdálensot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ssA-XY-kN2">
+                                <rect key="frame" x="20" y="120" width="280" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vzdálenost předmětu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="34r-UU-Ore">
+                                <rect key="frame" x="20" y="158" width="280" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="výška předmětu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zL4-VN-0qX">
+                                <rect key="frame" x="20" y="196" width="280" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="1" maxValue="60" id="oYb-Cl-eOb">
+                                <rect key="frame" x="18" y="120" width="221" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="qHR-NM-sDm" eventType="valueChanged" id="dXJ-RB-fik"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="1" maxValue="60" id="IFW-Rz-3DK">
+                                <rect key="frame" x="18" y="158" width="221" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="qHR-NM-sDm" eventType="valueChanged" id="8d6-PS-cro"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="60" id="Iqb-Cw-YYd">
+                                <rect key="frame" x="18" y="196" width="221" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="qHR-NM-sDm" eventType="valueChanged" id="6aF-Ts-wvA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.00 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="pw2-JY-ZrF">
+                                <rect key="frame" x="245" y="124" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.00 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="dnT-rO-7rh">
+                                <rect key="frame" x="245" y="162" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.00 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="S1D-3z-Lmi">
+                                <rect key="frame" x="245" y="200" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kGj-Ua-tgY">
+                                <rect key="frame" x="20" y="84" width="135" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="spojka"/>
+                                    <segment title="rozptylka"/>
+                                </segments>
+                                <connections>
+                                    <action selector="controlChanged:" destination="qHR-NM-sDm" eventType="valueChanged" id="JGV-1s-F5x"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Tlp-1c-RiP">
+                                <rect key="frame" x="165" y="84" width="135" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="ohnisko"/>
+                                    <segment title="mohutnost"/>
+                                </segments>
+                                <connections>
+                                    <action selector="controlChanged:" destination="qHR-NM-sDm" eventType="valueChanged" id="bee-ws-Fto"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" id="oNT-uZ-A8B" customClass="LensConstructionView">
+                                <rect key="frame" x="0.0" y="234" width="320" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Čočka" id="1HN-gS-RtO"/>
+                    <connections>
+                        <outlet property="_constructionView" destination="oNT-uZ-A8B" id="5C8-zY-o6B"/>
+                        <outlet property="_distanceLabel" destination="dnT-rO-7rh" id="iUT-f0-abr"/>
+                        <outlet property="_distanceSlider" destination="IFW-Rz-3DK" id="sVf-AQ-rMZ"/>
+                        <outlet property="_focusLabel" destination="pw2-JY-ZrF" id="16K-uQ-LPe"/>
+                        <outlet property="_focusPowerControl" destination="Tlp-1c-RiP" id="pHr-rX-f2B"/>
+                        <outlet property="_focusPowerTitleLabel" destination="ssA-XY-kN2" id="kfu-nh-DOJ"/>
+                        <outlet property="_focusSlider" destination="oYb-Cl-eOb" id="99S-Ca-53E"/>
+                        <outlet property="_lensTypeControl" destination="kGj-Ua-tgY" id="N54-Xs-UU9"/>
+                        <outlet property="_sizeLabel" destination="S1D-3z-Lmi" id="mdT-Yf-bk7"/>
+                        <outlet property="_sizeSlider" destination="Iqb-Cw-YYd" id="Y0I-eu-Z2B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDa-6q-nbh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="993"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lens" width="30" height="30"/>
+        <image name="mirror" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
